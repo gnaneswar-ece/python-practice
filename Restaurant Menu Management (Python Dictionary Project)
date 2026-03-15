@@ -1,0 +1,51 @@
+Five_Star = {
+    'Burger' : 100,
+    'Pizza' : 320,
+    'Wrap' : 90
+}
+while True:
+
+ print('''
+  1) Press 1 to veiw items.
+  2) Press 2 to add items.
+  3) Press 3 to delete items.
+  4) Press 4 to Change Items.
+  5) Press 5 to exit the Shop.''')
+ choice = int(input("Sir/Madam , Please press the button you want to go with👁️👁️!"))
+
+ if choice == 1:
+  # .items()
+  # print(Five_Star)
+   for i in Five_Star:
+    print(i , ':' , Five_Star[i])
+
+ elif choice == 2:
+  #ADD : Dict[Key] = Value
+  new_item = input("Enter the Item you wanna Add!")
+  new_price = int(input("Enter the Price!"))
+  Five_Star[new_item] = new_price
+  for i in Five_Star:
+    print(i , ':' , Five_Star[i])
+
+ elif choice == 3:
+  #Delete : using Del
+  ask1 = input("Which item you wanna delete?😫")
+  if ask1 in Five_Star:
+    del Five_Star[ask1]
+    print("Your", ask1 , " has been Deleted🥴")
+    for i in Five_Star:
+     print(i , ':' , Five_Star[i])
+  else:
+    print("The item is not in the menu , Bhagjaaaaaaaaaaaaaaaa")
+ elif choice == 4:
+  #Change the price : Dict[key] = new_value
+  ask2 = input("Which item you wanna Change?😫")
+  if ask2 in Five_Star:
+    new_price = int(input("Enter the New Price!"))
+    Five_Star[ask2] = new_price
+    print("new price has been updated successfully😎")
+    for i in Five_Star:
+     print(i , ':' , Five_Star[i])
+ elif choice == 5:
+  print("Thans for visiting Shop.")
+  break
