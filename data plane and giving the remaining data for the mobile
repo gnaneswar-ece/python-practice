@@ -1,0 +1,13 @@
+data_plane=float(input('data plane'))
+act_data=2000
+if data_plane>=0 and data_plane<=1000:
+  print('data is  good',act_data-data_plane)
+elif data_plane ==1000:
+  print('data is not good',act_data-data_plane)
+if data_plane>=1500:
+  print('your data is used',act_data-data_plane)
+elif data_plane ==2000:
+  print('100% data is not used',act_data-data_plane)
+else:
+  print("Invalid")
+
